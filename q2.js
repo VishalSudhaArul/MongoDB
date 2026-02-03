@@ -6,4 +6,3 @@ db.users.insertOne(
 );
 
 db.users.find()
-// 
