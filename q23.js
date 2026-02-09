@@ -54,7 +54,7 @@ rs.initiate({
 
 
 // new tab
-//--port 27018
+// mongosh --port 27018
 rs.initiate({
     _id:"rs1",
     members:[
@@ -110,3 +110,8 @@ db.customers.find()
 session.startTransaction()
 
 session.endSession()
+
+
+for (let i = 1; i <= 100; i++) {
+    db.users.insertOne({ name: "user" + i, age: 21 });
+}
